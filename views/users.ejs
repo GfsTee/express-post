@@ -1,0 +1,12 @@
+<%- include('./partials/header') %>
+
+    <% myData.forEach(user=> { %>
+        <p>
+            <%= user.firstName %>
+                <%= user.lastName %>
+                    is <%= user.gender %> and is <%= user.age %> Years old!
+        </p>
+
+        <%})%>
+
+            <%- include('./partials/footer') %>

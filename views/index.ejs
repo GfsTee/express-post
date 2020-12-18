@@ -1,0 +1,21 @@
+<%- include('./partials/header') %>
+
+    <h1>Index</h1>
+    <%# Wir brauchen bei Action den Pfad auf den er wechsel soll und die Methode POST um ihm zu sagen, dass er etwas
+        Schreiben soll %>
+        <form action="/add" method="POST">
+            <input type="text" name='firstName' placeholder="First Name"> <br>
+            <input type="text" name='lastName' placeholder="Last Name"><br>
+            <input type="number" name="age" id="" placeholder="Age"><br>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <input type="submit" value="Submit">
+        </form>
+        <% if(msg) { %>
+            <p>
+                <%= msg %>
+            </p>
+            <%}%>
+                <%- include('./partials/footer') %>
