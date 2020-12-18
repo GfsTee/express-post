@@ -4,6 +4,9 @@ const PORT = 5000
 const fs = require('fs');
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
+// Wir estellen die Datei von Hand mit einem leeren Array und importieren sie. Das hätte hier Zeile 10-24 gespart.
+let myDataEasy = require('./data.json')
+
 let myData = []
 if (fs.existsSync('./data.json')) {
     console.log("Datei existiert");
