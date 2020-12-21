@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 5000
+const PORT = process.env.PORT ||5000
 const fs = require('fs');
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
